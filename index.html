@@ -383,7 +383,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="company_img-box">
-            <img src="images/gallery/2.jpg" alt="Truck Image" class="img-fluid">
+            <img src="images/photos/home.jpg" alt="Truck Image" class="img-fluid">
           </div>
         </div>
         <div class="col-md-6">
@@ -419,7 +419,7 @@
       <div class="row layout_padding2-top">
         <div class="col-md-4">
           <div class="service_img-box s-b-1">
-            <img src="images/gallery/relocation.jpg" alt="">
+            <img src="images/photos/6.jpg" alt="">
             <div class="d-flex">
               <h3>
                 Relocation Services
@@ -439,7 +439,7 @@
         </div>
         <div class="col-md-4">
           <div class="service_img-box s-b-2">
-            <img src="images/gallery/tra.jpg" alt="">
+            <img src="images/photos/1.jpg" alt="">
             <div class="d-flex">
               <h3>
                 Transportation Services
@@ -459,7 +459,7 @@
         </div>
         <div class="col-md-4">
           <div class="service_img-box s-b-3">
-            <img src="images/gallery/storage.jpg" alt="">
+            <img src="images/photos/9.jpg" alt="">
             <div class="d-flex">
               <h3>
                 Storage Solutions
@@ -482,6 +482,152 @@
   </section>
   
   <!-- end service section -->
+
+<style>
+  
+
+.gallery {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+  .gallery-item {
+    height: 80vh;
+    max-height: 500px;
+    width: 8vw;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all .3s ease-in-out;
+    opacity: .9;
+
+    &:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+    
+    &:active {
+      width: 6vw;
+    }
+  }
+
+  .gallery-expand {
+    width: 30vw;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+    transform-origin: center;
+    
+     &:active {
+      width: 28vw;
+    }
+  }
+
+
+
+
+@keyframes backgroundSlide {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .gallery {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+  .gallery-item {
+    height: 50vh;
+    max-height: 500px;
+    width: 9vw;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all .3s ease-in-out;
+    opacity: .9;
+
+    &:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+    
+    &:active {
+      width: 6vw;
+    }
+  }
+
+  .gallery-expand {
+    width: 30vw;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+    transform-origin: center;
+    
+     &:active {
+      width: 28vw;
+    }
+  }
+
+
+
+
+@keyframes backgroundSlide {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+}
+</style>
+  <!-- gallery -->
+  <section class="mission_section">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <h2 class="heading_style">
+          Our Gallery
+        </h2>
+      </div>
+    </section>
+  <div class="gallery">
+    <img src="/images/photos/5.jpg" alt="nature" class="gallery-item">
+    <img src="/images/photos/3.jpg" alt="nature" class="gallery-item">
+    <img src="/images/photos/6.jpg" alt="nature" class="gallery-item">
+    <img src="/images/photos/12.jpg" alt="nature" class="gallery-item">
+    <img src="/images/photos/1.jpg" alt="nature" class="gallery-item">
+  </div>
+
+  <script>// Get images
+    const images = document.querySelectorAll(".gallery-item")
+    
+    // Loop images and add event listener
+    images.forEach(image => {
+      image.addEventListener("click", expandImage)
+    })
+    
+    // Function to expand the image
+    function expandImage(e) {
+      // Close the none clicked images
+      images.forEach(image => {
+        if(image !== e.target) {
+          image.classList.remove("gallery-expand")
+        }
+      })
+      // Clicked image
+      const selectedImage = e.target
+      // Add class
+      selectedImage.classList.add("gallery-expand")
+    }</script>
+  <!-- galeery end -->
 
 
   <!-- shop section -->
