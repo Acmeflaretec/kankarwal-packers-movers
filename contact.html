@@ -159,7 +159,41 @@
   </div>
 
 
+<style>
 
+.contact-info {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-info .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info .info i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-info .info p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+</style>
 
 
   <!-- contact section -->
@@ -171,34 +205,33 @@
     </div>
     <div class="container layout_padding2-top">
       <div class="row">
-        <div class="col-md-6">
-          <div id="map" class="w-100 h-100"></div>
+        <div class="col-md-6" style="overflow: hidden; position: relative; padding-top: 56.25%;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.079322393374!2d72.8874187!3d19.104175775893392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c967c72975ad%3A0x75ce6a80540e5102!2sBlue%20Star%20House!5e0!3m2!1sen!2sin!4v1712553282705!5m2!1sen!2sin" width="600" height="480" style="border:0; position: absolute; top: 0; left: 0; width: 100%; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
+        
+      
         <div class="col-md-6">
-          <div class="contact_form-container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Your Name">
-              </div>
-              <div>
-                <input type="email" placeholder="Your Email">
-              </div>
-              <div>
-                <input type="text" placeholder="Your Phone">
-              </div>
-
-              <div>
-                <input type="text" class="message_input" placeholder="Message">
-              </div>
-              <div class="d-flex justify-content-end">
-                <button type="submit " class="">
-                  Send
-                </button>
-              </div>
-            </form>
+          <div class="contact-info">
+            <div class="info">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Adres:Gala No.14, Prabhat Wadi, Jagannath Mandir Road, Opp. Blue Star
+                House, Sakinaka, Andheri(E), Mumbai- 400 072</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-envelope"></i>
+              <p>Email Id: <a href="mailto:kankarwalpackersmovers3@gmail.com">kankarwalpackersmovers3@gmail.com</a>  </p>
+            </div>
+            <div class="info">
+              <i class="fas fa-phone"></i>
+              <p>Phone 1: <a href="tel:+91 9820517100"></a> 9820517100</p>
+            </div>
+            <div class="info">
+              <i class="fas fa-phone"></i>
+              <p>Phone 2: <a href="tel:+91 9820534100"></a> +91 9820534100</p>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
