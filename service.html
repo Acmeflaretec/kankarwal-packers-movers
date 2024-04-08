@@ -276,7 +276,67 @@
     </div>
   </section>
 
+  <style>
+  
 
+    .gallery {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 200px;
+    gap: 0.25rem;
+  
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  
+      &:not(.hero) { cursor: pointer; }
+    }
+  
+    & .hero {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  
+  @media (width < 700px) {
+    .gallery {
+      grid-template-columns: repeat(2,1fr);
+      grid-auto-rows: 175px;
+    }
+  }
+  </style>
+    <!-- gallery -->
+    <section class="ourGal mission_section mt-5">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <h2 class="heading_style">
+            Our Gallery
+          </h2>
+        </div>
+      </section>
+      <div  >
+        <main class='gallery mt-5 mb-5'>
+          <img src='images/photos/6.jpg' class='hero' >
+          <img src='images/photos/5.jpg'>
+          <img src='images/photos/1.jpg'>
+          <img src='images/photos/9.jpg'>
+          <img src='images/photos/3.jpg'>
+        </main>
+      </div>
+     
+      <script>
+  const hero = document.querySelector('.hero');
+  
+  function activate(e) {
+    if (e.target.matches('.hero') || !e.target.matches('img')) return;
+    [hero.src, e.target.src] = [e.target.src, hero.src];
+  }
+  
+  window.addEventListener('click',activate,false);
+      </script>
+    <!-- galeery end -->
 
   <!-- info section -->
   <section class="info_section mt-5">
