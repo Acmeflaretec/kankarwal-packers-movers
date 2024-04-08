@@ -537,60 +537,17 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .gallery {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.ourGal{
+  display: none;
 }
-  .gallery-item {
-    height: 50vh;
-    max-height: 500px;
-    width: 9vw;
-    object-fit: cover;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    transition: all .3s ease-in-out;
-    opacity: .9;
 
-    &:hover {
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-      opacity: 1;
-    }
-    
-    &:active {
-      width: 6vw;
-    }
-  }
-
-  .gallery-expand {
-    width: 30vw;
-    border-radius: 20px;
-    transition: all .3s ease-in-out;
-    transform-origin: center;
-    
-     &:active {
-      width: 28vw;
-    }
-  }
-
-
-
-
-@keyframes backgroundSlide {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  .gallery {
+  display: none;
 }
 }
 </style>
   <!-- gallery -->
-  <section class="mission_section">
+  <section class="ourGal mission_section">
     <div class="container">
       <div class="d-flex justify-content-center">
         <h2 class="heading_style">
